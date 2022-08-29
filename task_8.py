@@ -16,10 +16,10 @@ print('--------------------------')
 h = int(input('Введите высоту рввнобедренного треугольника: '))
 print('--------------------------')
 
-shir = h + (h - 1)   # замениь на английской слово ширина
+width = h + (h - 1)   # замениь на английской слово ширина
 
-for line in range(0, shir, 2):
-    print(((shir + line) // 2) * ' ' + (shir - line) * '#' + (shir + line // 2) * ' ')
+for line in range(1, width + 1, 2):
+    print(((width - line) // 2) * ' ' + line * '#' + (width - line // 2) * ' ')
 print()
 
 
