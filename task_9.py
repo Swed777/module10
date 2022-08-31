@@ -13,4 +13,16 @@ print('--------------------------')
 # 21    23    25    27    29
 
 
+high  = int(input('Введите количество уровней пирамиды: '))
+count = 1  # цифра для вывода на строку 
+
+for h in range(1, high + 1):
+  print((high - h) * '\t', end = '')
+  for line in range(h):
+    print(count, end = '') 
+    count += 2
+    print(2 * '\t', end = '')
+  print()
+
+print()
 print('--------------------------')

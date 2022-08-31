@@ -21,17 +21,16 @@ print('--------------------------')
 
 
 n = int(input("Введите размер квадрата: "))
+print()
 
-for y in range(n):
-    for x in range(n):
-        buf_x = (n - 1) - y  # вспомогательное число, которое будет уменьшаться от n-1 до 0
-        buf_x2 = y + 1  # вспомогательное число, которое будет увеличиваться от 0 до n-1
-        if buf_x > x or buf_x2 < x:
-            print('', end='\t')
-        elif buf_x == x or buf_x2 == n - x:
-            print('^', end='\t')
-        else:
-            print('', end='\t')
+for row in range(n):
+  # print(' ') пробел между строками. Без него лучше выглядит )
+    for col in range(n):
+        print(' ', end='')
+        if col == row or col == (n-1) - row:
+            print('^', end='')
+
     print()
+
 
 print('--------------------------')
