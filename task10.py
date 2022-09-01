@@ -16,36 +16,6 @@ print('--------------------------')
 
 n = int(input('Введите число N: '))
 
-
-'''
-Иду по строчкам
-
-for row in range(n):
-  for col in range(2 * n):
-    if col == row or col == (2 * n - 1) - row:
-      print(n - row, end = '')
-    else:
-       print('.', end = '')
-  print()  
-'''
-
-'''
-# Иду по строкам
-
-for col in range(2 * n):
-  print(n)
-  for row in range(n):
-     print(col, n - row, end = '')
-  '''  
-
-'''
-for col_1 in range(n, 0, -1):
-  print(col_1, end = '')
-for col_2 in range(1, n + 1):
-  print(col_2, end = '')
-#5432112345
-'''
-
 for i in range(n, 0, -1):
   m = n 
   
@@ -63,3 +33,16 @@ for i in range(n, 0, -1):
 
 print()
 print('--------------------------')
+
+'''
+
+Вариант Никиты:
+
+depth = int(input('Введите глубину ямы: '))
+for i in range(depth, 0, -1):
+  numbers = list(str(num) for num in range(depth, i - 1, -1))
+  left, right = ''.join(numbers), ''.join(numbers[::-1])
+  dots = '.' * ((depth - len(numbers)) * 2)
+  print(left + dots + right)
+
+  '''
